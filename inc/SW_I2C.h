@@ -4,7 +4,7 @@
 #define SW_I2C_port              GPIOA
 #define SDA_pin                  GPIO_PIN_1
 #define SCL_pin                  GPIO_PIN_2
-//
+//Pull-UP rezistor pouze na SDA_pin!
 #define SW_I2C_OUT()             do{GPIO_DeInit(SW_I2C_port); GPIO_Init(SW_I2C_port, SDA_pin, GPIO_MODE_OUT_PP_LOW_FAST); GPIO_Init(SW_I2C_port, SCL_pin, GPIO_MODE_OUT_PP_LOW_FAST);}while(0)
 #define SW_I2C_IN()              do{GPIO_DeInit(SW_I2C_port); GPIO_Init(SW_I2C_port, SDA_pin, GPIO_MODE_IN_FL_NO_IT); GPIO_Init(SW_I2C_port, SCL_pin, GPIO_MODE_OUT_PP_LOW_FAST);}while(0)
 #define SDA_HIGH()               GPIO_WriteHigh(SW_I2C_port, SDA_pin)
