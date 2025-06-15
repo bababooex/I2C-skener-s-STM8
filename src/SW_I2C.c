@@ -1,6 +1,7 @@
 #include "sw_i2c.h"
 #include "delay.h"
 #include "tim.h"
+//tato knihovna spolehlivě umožňuje posílat data do registrů a také čtení dat z nich, je více intuitivní, než od ST
 void SW_I2C_init(void)
 {
     SW_I2C_OUT();
