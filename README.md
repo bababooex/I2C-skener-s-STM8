@@ -1,0 +1,1 @@
+# I2C-skener-s-STM8
