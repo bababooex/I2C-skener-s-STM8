@@ -25,11 +25,11 @@ void main(void) {
     lcd_clear();
     lcd_gotoxy(0, 0);
     lcd_puts("Skenuji I2C...");
-    for (addr = 1; addr < 127; addr++) {
+    for (addr = 0; addr < 127; addr++) {//rozsah adres standartně 7 bitů
         if (i2c_device_exists(addr)) {
 						lcd_clear();
 						lcd_gotoxy(0, 0);
-						sprintf(buffer, "I2C Adresa: 0x%02X", addr);
+						sprintf(buffer, "I2C Adresa: 0x%02X", addr);//výpis v hex formátu
 						lcd_puts(buffer);
 						while (1);
 				}
