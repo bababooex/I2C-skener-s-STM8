@@ -1,6 +1,6 @@
 #include "stm8s.h"
 #include "delay.h"
-//nastaven� pinu pro I2C sbernici - pro cten� a z�pis
+//piny jsou nastaveny podle potřeby, ne všechny porty jsou ale vhodné pro účely této knihovny!
 #define SW_I2C_port              GPIOA
 #define SDA_pin                  GPIO_PIN_1
 #define SCL_pin                  GPIO_PIN_2
@@ -15,6 +15,7 @@
 #define I2C_ACK                  0xFF
 #define I2C_NACK                 0x00
 #define I2C_timeout              1000
+//sekvence pro I2C, tzn. start. stop, zápis, čtení, acknowledgement a negative acknowledgement
 void SW_I2C_init(void);
 void SW_I2C_start(void);
 void SW_I2C_stop(void);
